@@ -21,7 +21,7 @@ export class BlogController {
     res.status(200).json(result);
   }
 
-  @Get('/detail/:id')
+  @Get('/details/:id')
   async detailBlog(@Param('id') id: string, @Res() res: Response) {
     const result = await this.blogService.detailBlog(id);
     res.status(200).json(result);
